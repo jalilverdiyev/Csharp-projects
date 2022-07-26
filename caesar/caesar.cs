@@ -71,7 +71,7 @@ namespace caesar
             string a_z = "abcdefghijklmnopqrstuvwxyz0123456789";
             string A_Z = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             string nums = "0123456789";
-            // Console.Clear();
+            Console.Clear();
             Console.WriteLine("Enter the text to be decoded: ");
             string input = Console.ReadLine();
             Console.WriteLine("Enter the step for decipher: ");
@@ -129,7 +129,7 @@ namespace caesar
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Choose operation:\n1.Encode\n2.Decode:");
+            Console.Write("Choose operation:\n1.Encode\n2.Decode\n:");
             int operation = Convert.ToInt32(Console.ReadLine());
             switch (operation)
             {
