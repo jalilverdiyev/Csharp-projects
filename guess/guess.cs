@@ -38,6 +38,8 @@ namespace guess
                     Console.WriteLine("Cold");
                 }
             }
+
+            Console.ReadLine();
         }
     }
 }
