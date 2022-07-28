@@ -92,31 +92,77 @@ namespace Tictactoe
                     case 0:
                         Console.WriteLine("It is X's turn. Choose your move: ");
                         move = Convert.ToInt32(Console.ReadLine());
-                        if(table[move-1])
+                        if(move<=9)
                         {
-                            moves[move-1] = "X";
-                            table[move-1] = false;
-                            state = 1;
+                            if(table[move-1])
+                            {
+                                moves[move-1] = "X";
+                                table[move-1] = false;
+                                state = 1;
+                            }
+                            else
+                            {
+                                Console.WriteLine("You can't move like that!");
+                                Thread.Sleep(2000);
+                            }
                         }
                         else
                         {
-                            Console.WriteLine("You can't move like that!");
-                            Thread.Sleep(2000);
-                        }
+                            do
+                            {
+                                Console.WriteLine("Oops not right option :(");
+                                move =  Convert.ToInt32(Console.ReadLine());
+                            } while (move>9);
+                            
+                            if(table[move-1])
+                            {
+                                moves[move-1] = "X";
+                                table[move-1] = false;
+                                state = 1;
+                            }
+                            else
+                            {
+                                Console.WriteLine("You can't move like that!");
+                                Thread.Sleep(2000);
+                            }
+                        }                        
                         break;
                     case 1:
                         Console.WriteLine("It is O's turn. Choose your move: ");
                         move = Convert.ToInt32(Console.ReadLine());
-                        if (table[move-1])
+                        if(move<=9)
                         {
-                            moves[move-1] = "O";
-                            table[move-1] = false;
-                            state = 0;
+                            if (table[move-1])
+                            {
+                                moves[move-1] = "O";
+                                table[move-1] = false;
+                                state = 0;
+                            }
+                            else
+                            {
+                                Console.WriteLine("You can't move like that!");
+                                Thread.Sleep(2000);
+                            }
                         }
                         else
                         {
-                            Console.WriteLine("You can't move like that!");
-                            Thread.Sleep(2000);
+                            do
+                            {
+                                Console.WriteLine("Oops not right option :(");
+                                move =  Convert.ToInt32(Console.ReadLine());
+                            } while (move>9);
+                            
+                            if (table[move-1])
+                            {
+                                moves[move-1] = "O";
+                                table[move-1] = false;
+                                state = 0;
+                            }
+                            else
+                            {
+                                Console.WriteLine("You can't move like that!");
+                                Thread.Sleep(2000);
+                            }
                         }
                         break;
                     default:
