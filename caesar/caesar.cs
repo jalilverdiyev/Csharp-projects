@@ -146,6 +146,8 @@ namespace caesar
                     Console.WriteLine("Wrong input :(");
                     break;
             }
+
+            Console.ReadLine();
         }
     }
 }
