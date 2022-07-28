@@ -138,6 +138,8 @@ namespace Tictactoe
                 }
             }
 
+            Console.ReadLine();
+
 
         }
    }
