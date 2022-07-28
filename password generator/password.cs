@@ -48,6 +48,8 @@ namespace password
                 Console.WriteLine("Unexpected error :(");
             }
 
+            Console.ReadLine();
+
         }    
     }    
 }
